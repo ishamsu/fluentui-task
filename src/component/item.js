@@ -21,7 +21,7 @@ const controlWrapperClass = mergeStyles({
 });
 const toggleStyles = {
   root: { margin: margin },
-  label: { marginLeft: 10, color:"red" },
+  label: { marginLeft: 10, },
 };
 const addItemButtonStyles = { root: { margin: margin } };
 const _blueGroupIndex = 2;
@@ -33,11 +33,11 @@ export default class DetailsListGroupedExample extends React.Component {
 
     this.state = {
       items: [
-        { key: 'a', name: 'a', color: 'red' , Allow:'allow'},
-        { key: 'b', name: 'b', color: 'red',Allow:'block' },
-        { key: 'c', name: 'c', color: 'blue',Allow:'allow' },
-        { key: 'd', name: 'd', color: 'blue' ,Allow:'allow'},
-        { key: 'e', name: 'e', color: 'blue' ,Allow:'block'},
+        { key: 'a', name: 'https://fluent-task.herokuapp.com', color: 'date' ,Allow:'✓ allow'},
+        { key: 'b', name: 'https://fluent-task.herokuapp.com', color: 'date',Allow:'✕ block' },
+        { key: 'c', name: 'https://fluent-task.herokuapp.com', color: 'date',Allow:'✓ allow' },
+        { key: 'd', name: 'https://fluent-task.herokuapp.com', color: 'date' ,Allow:'✓ allow'},
+        { key: 'e', name: 'https://fluent-task.herokuapp.com', color: 'date' ,Allow:'✕ block'},
       ],
       // This is based on the definition of items
       groups: [
@@ -45,11 +45,10 @@ export default class DetailsListGroupedExample extends React.Component {
         { key: 'groupblue2', name: 'msn.com', startIndex: 2, count: 3, level: 0 },
       ],
       showItemIndexInView: false,
-      isCompactMode: false,
     };
 
     this._columns = [
-      { key: 'name', name: 'Name', fieldName: 'name', minWidth: 100, maxWidth: 200, isResizable: true },
+      { key: 'name', name: 'attempts to visit blaocked website', fieldName: 'name', minWidth: 100, maxWidth: 200, isResizable: true },
       { key: 'color', name: '', fieldName: 'color', minWidth: 100, maxWidth: 200 },
       { key: 'Allow', name: '', fieldName: 'Allow', minWidth: 100, maxWidth: 200 },
 
@@ -66,6 +65,7 @@ export default class DetailsListGroupedExample extends React.Component {
         <DetailsList
           componentRef={this._root}
           items={items}
+    
           groups={groups}
           columns={this._columns}
           ariaLabelForSelectAllCheckbox="Toggle selection for all items"

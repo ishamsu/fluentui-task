@@ -16,7 +16,7 @@
 .App-header {
     background-color: #044777;
     min-height: 25vh;
-    min-width: 160vh;
+    min-width: 200vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,7 +36,6 @@
 }
 
 .App-header3 {
-    /* width: 0vh; */
     align-items: left;
     justify-content: left;
     font-size: calc(5px + 2vmin);
